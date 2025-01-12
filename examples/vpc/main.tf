@@ -14,8 +14,8 @@ module "vpc" {
     subnet_2 = {
       cidr_block = "10.0.1.0/24"
       # Public subnets are indicated by setting "public" option to true. This will automatically create an Internet Gateway, routing table, and associate the subnet with the routing table.
-      public     = true
-      az         = "us-east-1a"
+      public = true
+      az     = "us-east-1a"
     }
   }
 }
