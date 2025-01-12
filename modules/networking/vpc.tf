@@ -30,8 +30,10 @@ resource "aws_subnet" "this" {
   tags = merge(
     local.common_tags,
     {
-      name = "${var.vpc_config.name}-${each.key}"
+      name   = "${var.vpc_config.name}-${each.key}"
+      access = each.value.public ? "Public" : "Private"
   })
+
   lifecycle {
     precondition {
       condition     = contains(data.aws_availability_zones.available.names, each.value.az)
