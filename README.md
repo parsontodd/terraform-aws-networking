@@ -12,7 +12,7 @@ The module
     2.3 The user provides the AWS availability zone
 
 ### Example
-Use the following Terraform to use the module to create 2 subnets - 1 private and 1 public.
+Use the following Terraform to use the module to create 2 subnets - 1 private and 1 public. More examples can be found in the examples directory in this repo.
 
 ```
 module "vpc" {
